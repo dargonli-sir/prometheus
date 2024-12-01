@@ -17,7 +17,7 @@ WORKDIR /prometheus
 RUN chown -R nobody:nobody /etc/prometheus /prometheus
 
 USER       nobody
-EXPOSE     9090
+EXPOSE     9092
 VOLUME     [ "/prometheus" ]
 ENTRYPOINT [ "/bin/prometheus" ]
 CMD        [ "--config.file=/etc/prometheus/prometheus.yml", \
